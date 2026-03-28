@@ -62,58 +62,112 @@ p {
 --------------------------*/
 
 body {
-    width: var(--max-width);
+    max-width: var(--max-width);
     margin: 0 auto;
     /* auto centers each element horizontally)*/
 }
 
-nav,
 p,
-section,
 article {
     margin: var(--spacing);
     padding: var(--spacing);
 }
 
-section {
-    margin: 22px 16px;
+h2 {
+    padding: .5rem 0
 }
 
 /* -------------------------
-   HEADER & FOOTER
+   HEADER
 --------------------------*/
 
-header,
-footer {
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
-header img,
-header nav {
-    display: inline-block;
-    /* allows the logo and navigation menu to sit side-by-side in the header. */
-    vertical-align: middle;
-    /* makes the logo and navigation line up evenly vertically instead of looking uneven */
-}
-
 header img {
-    width: 100px;
+    width: 120px;
 }
 
-header nav a,
-footer nav a {
-    color: var(--accent2-color);
+/* styles the <nav > box */
+header nav {
+    justify-self: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* styles the row with the <ul> inside the <nav> box*/
+.header-navigation {
+    display: flex;
+    /* default */
+    list-style: none;
+    justify-content: space-between;
+}
+
+/* styles li as a row to make equal-width “buttons”*/
+.header-navigation li {
+    flex: 1;
+}
+
+/* the actual buttons */
+.header-navigation a {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem;
+    color: var(--accent1-color);
+    border: 1px solid var(--dark-gray-color);
+    background-color: white;
     text-decoration: none;
-    /* removes the underline on the hyperlinks */
 }
 
+/* -------------------------
+   FOOTER
+--------------------------*/
 footer {
-    text-align: left;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    /* same colors as header */
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+footer::before {
+    content: "";
+    flex: 1;
+}
+
+footer p {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
 footer nav {
     margin: 0;
+}
+
+.socialmedia {
+    display: flex;
+    flex: 1;
+    gap: .5rem;
+    justify-content: flex-end;
+}
+
+/* social media icons */
+.socialmedia img {
+    width: 30px;
+    height: auto;
+    margin: 4px;
 }
 
 /* -------------------------
@@ -163,11 +217,34 @@ footer nav {
 }
 
 /* -------------------------
-   SOCIAL MEDIA ICONS
+   HISTORY & ADVENTURE SECTIONS
 --------------------------*/
+.history,
+.adventure {
+    border: 2px solid var(--primary-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%
+}
 
-.socialmedia img {
-    width: 30px;
+.three-columns {
+    display: flex;
+    align-items: center
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery figure {
+    flex: 1;
+    /* equal width columns */
+    text-align: center;
+}
+
+/* make the image fit its container, but don’t distort it. */
+.gallery img {
+    width: 80%;
     height: auto;
-    margin: 4px;
 }
