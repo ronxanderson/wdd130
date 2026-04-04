@@ -165,13 +165,13 @@ header nav {
 
 /* left column - style the Name & Email labels and Message Purpose */
 .form-double-col label,
-.form-double-col legend {
+.message-purpose-heading {
     grid-column: 1;
     text-align: left;
 }
 
 /* left column - style Message Purpose vertically */
-.form-double-col legend {
+.message-purpose-heading {
     grid-row: span 3;
     align-self: center;
 }
