@@ -579,6 +579,17 @@ section,
 /* -------------------------
    INDEX PAGE
 --------------------------*/
+.form-heading {
+    /* styles the newsletter form heading on the home page */
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+    /* add spacing between letters */
+    margin-bottom: var(--space-md);
+    /* separates it from the form fields */
+}
 
 .home-newsletter-form legend {
     padding-bottom: var(--space-md);
