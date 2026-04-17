@@ -376,6 +376,20 @@ textarea {
 }
 
 /* -------------------------
+   SHARED SECTION STYLES
+--------------------------*/
+section,
+.bottom {
+    /* styles sections on home, about, and trips pages and .bottom on contact page */
+    border: 2px solid var(--primary-color);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    width: 100%;
+    /* full width of the section & bottom containers, not the screen */
+}
+
+/* -------------------------
    SHARED BUTTON STYLES
 --------------------------*/
 .button {
@@ -415,16 +429,17 @@ textarea {
     position: absolute;
     /* positions the button relative to its nearest positioned parent (.hero) */
     bottom: 3rem;
+    /* positions the button 3rem up from the bottom of the hero container */
     left: 50%;
     /* moves the left edge of the button to the center of the container */
     transform: translateX(-50%);
     /* moves the button left by 50% of its own width */
 }
 
-/* centers the newsletter form and its inline content (including the button) */
 .home-newsletter-form {
+    /* centers the newsletter form on the index page and its inline content (including the button) */
     width: 100%;
-    /* makes the form container span the full width of its parent */
+    /* allows the form container span the full width of its parent */
     max-width: 36rem;
     /* limits the maximum width so the form doesn’t get too wide on large screens */
     margin: var(--space-lg) auto;
@@ -435,7 +450,7 @@ textarea {
 
 .home-newsletter-form .button {
     margin-top: var(--space-md);
-    /* adds space above the button to separate it from the form field */
+    /* adds space above the button on the index page to separate it from the form field */
 }
 
 /* -------------------------
@@ -464,18 +479,8 @@ textarea {
     margin: var(--space-xs) 0 0 var(--space-lg);
 }
 
-section,
-.bottom {
-    border: 2px solid var(--primary-color);
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-md);
-    padding: var(--space-md);
-    width: 100%;
-    /* full width of the section & bottom containers, not the screen */
-}
-
 .three-columns {
-    /* equally space paragraphs with a picture in between them */
+    /* equally spaced paragraphs with a picture in between them */
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     /* creates three columns: text, image (auto-sized), text */
